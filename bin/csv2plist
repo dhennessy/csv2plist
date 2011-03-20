@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+#
+#  Created on 2011-3-19.
+#  Copyright (c) 2011. All rights reserved.
+
+require 'rubygems'
+require File.expand_path(File.dirname(__FILE__) + "/../lib/csv2plist")
+require "csv2plist/cli"
+
+Csv2plist::CLI.execute(STDOUT, ARGV)
