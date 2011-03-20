@@ -40,7 +40,7 @@ module Csv2plist
       outputfile = options[:outputfile] || srcfile.gsub(/.csv/i, ".plist")
       outputfile = outputfile + ".plist" if outputfile == srcfile
       
-      puts "#{srcfile} -> #{outputfile}"
+      Csv2plist.convert(srcfile, outputfile)
     end
   end
 end
