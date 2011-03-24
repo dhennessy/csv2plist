@@ -33,6 +33,37 @@ then you can simply do this:
 
 	$ csv2plist sample.csv
 	
-This will create a property list file called sample.plist.
+This will create a property list file called sample.plist. 
 
 See `csv2plist -h` for other options.
+
+# CONVERSION EXAMPLES
+
+## Basic Strings
+
+If `test.csv` contains the following:
+
+	name,age
+	John,23
+	Mark,25
+
+Converting it with `csv2plist test.csv` will produce a file containing:
+
+	<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+	<plist version="1.0">
+	<array>
+		<dict>
+			<key>age</key>
+			<string>23</string>
+			<key>name</key>
+			<string>John</string>
+		</dict>
+		<dict>
+			<key>age</key>
+			<string>25</string>
+			<key>name</key>
+			<string>Mark</string>
+		</dict>
+	</array>
+	</plist>
