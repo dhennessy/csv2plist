@@ -15,7 +15,6 @@ Gem::Specification.new do |s|
   
   s.rubyforge_project = "csv2plist"
 
-  s.add_dependency('fastercsv', '>= 1.5.3')
   s.add_dependency('plist', '>= 3.1.0')
   
   s.files         = `git ls-files`.split("\n")

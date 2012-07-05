@@ -1,4 +1,4 @@
-require 'fastercsv'
+require 'csv'
 require 'plist'
 
 $:.unshift(File.dirname(__FILE__)) unless
@@ -7,7 +7,7 @@ $:.unshift(File.dirname(__FILE__)) unless
 
 module Csv2plist
   def self.convert(src, dst, opts={})
-    rows = FasterCSV.read(src)
+    rows = CSV.read(src)
     cols = rows[0]
     entries = []
     puts "Columns: #{cols.inspect}"
